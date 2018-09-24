@@ -1,0 +1,61 @@
+$Black: #222222;
+$Blue: #ae80fe;
+$Yellow: #e6db73;
+$White-normal: #cfcfc1;
+$White-bright: #f7f7f1;
+
+html {
+    font-family: Monaco;
+}
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+    background: $Black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+}
+#editor {
+    width: 100%;
+    overflow: hidden;
+    line-height: 150%;
+    flex-grow: 1;
+    .CodeMirror {
+        color: $White-normal;
+        background: $Black;
+    }
+    .CodeMirror-lines {
+        padding: 0;
+    }
+    .CodeMirror-gutters {
+        border: none;
+        background-color: $Black;
+        white-space: nowrap;
+    }
+    .CodeMirror-linenumber {
+        padding: 0 3px 0 0;
+        min-width: 0;
+        text-align: right;
+        color: $Yellow;
+        white-space: nowrap;
+    }
+    .CodeMirror-cursor {
+        border-left: 1px solid $White-bright;
+    }
+    .cm-fat-cursor .CodeMirror-cursor{
+        background: $White-bright;
+    }
+}
+#footer {
+    line-height: 150%;
+    color: $White-normal;
+    flex-grow: 0;
+    user-select: none;
+    &.hide {
+        opacity: 0;
+    }
+}

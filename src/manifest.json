@@ -1,0 +1,25 @@
+{
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "icon.png",
+    "commands": [
+        {
+            "name": "youya inputter",
+            "identifier": "youya-inputter.inputter",
+            "script": "./open-inputter.js"
+        },
+        {
+            "script": "selection-changed.js",
+            "handlers": {
+                "actions": {
+                    "SelectionChanged": "changeHandler"
+                }
+            },
+            "identifier": "youya-inputter.selection"
+        }
+    ],
+    "menu": {
+        "isRoot": true,
+        "items": ["youya-inputter.inputter"]
+    }
+}

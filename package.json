@@ -1,0 +1,30 @@
+{
+  "name": "youya-input",
+  "version": "0.1.0",
+  "engines": {
+    "sketch": ">=3.0"
+  },
+  "skpm": {
+    "name": "youya-input",
+    "manifest": "src/manifest.json",
+    "main": "youya-input.sketchplugin",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link",
+    "inp": "parcel build inputter_src/index.html --out-dir assets --public-url ./ --no-source-maps"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.5.2",
+    "codemirror": "^5.40.2",
+    "lodash.debounce": "^4.0.8",
+    "node-sass": "^4.9.3",
+    "sketch-module-web-view": "^1.2.3"
+  },
+  "author": "duan <hello@duanjun.net>"
+}
